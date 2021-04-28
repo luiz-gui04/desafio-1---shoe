@@ -1,4 +1,4 @@
-function teste() {
+function script() {
   function colorButton() {
     const button = document.querySelectorAll('.shoes-options .color');
     const shoe = document.querySelector('.shoes img');
@@ -116,4 +116,4 @@ function teste() {
   cartButton();
 }
 
-teste();
+script();
