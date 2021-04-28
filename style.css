@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.none {
+  display: none;
+  animation: fechar 0.3s forwards !important;
+}
+
+.flex {
+  display: flex !important;
+  animation: animar 0.3s forwards;
+}
+
+.animar {
+  display: flex;
+  animation: animar 0.3s forwards;
+}
+
+@keyframes animar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fechar {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.border {
+  border: 2px solid #decc00 !important;
+}
+
+.select {
+  background: #decc00 !important;
+}
+
+.background {
+  filter: blur(7px);
+  background-image: url('img/bgjordan.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+
+.container .shoes {
+  animation: animar 0.3s forwards;
+  width: 263px;
+  height: 386px;
+  padding: 0 1%;
+  background-color: rgba(30, 30, 30, 0.99);
+  box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.8);
+  border-radius: 16px 50px 16px 16px;
+  position: relative;
+}
+
+.shoes div.img {
+  position: absolute;
+  left: 60px;
+  bottom: 200px;
+}
+
+.shoes img {
+  height: 320px;
+  width: 320px;
+  border-radius: 0px;
+
+  transform: rotate(30deg);
+}
+
+.shoes .shoes-desc {
+  padding-top: 120px;
+  text-align: left;
+}
+
+.shoes .shoes-desc p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #decc00;
+}
+
+.shoes .shoes-desc h1 {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #faf8eb;
+  height: 100px;
+}
+/*
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+*/
+
+.shoes .shoes-desc h2 {
+  display: flex;
+  margin-left: 50%;
+  font-weight: 700;
+  font-size: 22px;
+  color: #faf8eb;
+  align-items: center;
+}
+.shoes .shoes-desc h2 span {
+  color: #decc00;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.shoes .shoes-options {
+  display: flex;
+}
+.shoes-options .options {
+  flex-grow: 1;
+}
+
+.shoes-options .options p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #decc00;
+}
+
+.shoes-options .options .color-option {
+  display: flex;
+  margin: 2% 0;
+}
+
+.options .color-option .color {
+  width: 26px;
+  height: 26px;
+  margin-right: 10%;
+  background-color: saddlebrown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+}
+
+.options .color-option .color:hover {
+  opacity: 0.8;
+}
+
+.options .color-option .color:nth-child(1) {
+  background-color: #cc0000;
+}
+
+.options .color-option .color:nth-child(2) {
+  background-color: #76777b;
+}
+
+.options .size-option {
+  display: flex;
+  margin: 2% 0;
+}
+
+.options .size-option .size {
+  background-color: #faf8eb;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 20%;
+  margin-right: 4%;
+}
+
+.cart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.cart .cart-buy {
+  width: 49px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  background: #decc00;
+}
+
+.cart .cart-buy .shop-cart {
+  margin-top: 8px;
+}
+
+.buy {
+  position: absolute;
+  height: 30rem;
+  width: 45rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 16px 50px 16px 16px;
+  background-color: rgba(30, 30, 30, 0.99);
+  padding-left: 2%;
+}
+
+.buy .img-buy img {
+  width: 20rem;
+}
+
+.buy .buy-desc {
+  color: #faf8eb;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buy .buy-desc h1 {
+  font-size: 2.75rem;
+  font-family: 'Montserrat', sans-serif;
+  padding-right: 1%;
+  margin-bottom: 1%;
+  color: #faf8eb;
+}
+
+.buy .buy-desc .buy-compra p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #decc00;
+}
+
+.buy .buy-desc p span {
+  font-weight: 400;
+  color: #faf8eb;
+}
+
+.buy-compra h2 {
+  margin-top: 2%;
+  font-weight: 400;
+  color: #faf8eb;
+}
+
+.buy .buy-desc .quantidade {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantidade p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #decc00;
+  margin-bottom: 1%;
+}
+
+.quantidade .quantidade-btns {
+  display: flex;
+}
+
+.quantidade .buy-quantidade {
+  background: #faf8eb;
+  color: #000;
+  padding: 1%;
+}
+
+.quantidade button {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.quantidade button:hover {
+  opacity: 0.9;
+}
+
+.quantidade .buy-menos {
+  border-radius: 2rem 0 0 2rem;
+}
+
+.quantidade .buy-mais {
+  border-radius: 0 2rem 2rem 0;
+}
+
+.buy-finalizar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.buy-finalizar .comprar {
+  width: 10rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  background: #decc00;
+  color: #faf8eb;
+  font-size: 1.25rem;
+  margin-right: 8%;
+  transition: 0.2s;
+}
+.buy-finalizar .comprar:hover {
+  opacity: 0.9;
+}
+
+.buy-finalizar p {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #faf8eb;
+}
+.buy-finalizar p:hover {
+  opacity: 0.8;
+}
