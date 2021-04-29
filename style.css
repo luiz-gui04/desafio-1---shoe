@@ -45,13 +45,6 @@
   background: #decc00 !important;
 }
 
-.background {
-  filter: blur(7px);
-
-  width: 100vw;
-  height: 100%;
-}
-
 main {
   background-image: url('img/bgjordan.jpg');
   background-position: center center;
@@ -86,6 +79,7 @@ main {
 
 .shoes img {
   width: 300px;
+  height: 300px;
   border-radius: 0px;
 
   transform: rotate(30deg);
@@ -230,6 +224,7 @@ text-overflow: ellipsis;
 
 .buy .img-buy img {
   width: 20rem;
+  height: 20rem;
 }
 
 .buy .buy-desc {
@@ -348,6 +343,7 @@ text-overflow: ellipsis;
 
   .buy .img-buy img {
     width: 17rem;
+    height: 17rem;
   }
 
   .buy .buy-desc h1 {
@@ -409,6 +405,7 @@ text-overflow: ellipsis;
 
   .shoes img {
     width: 230px;
+    height: 230px;
   }
 
   .shoes div.img {
@@ -455,6 +452,7 @@ text-overflow: ellipsis;
 @media screen and (max-width: 460px) {
   .shoes img {
     width: 230px;
+    height: 230px;
   }
 
   .shoes div.img {
@@ -484,6 +482,7 @@ text-overflow: ellipsis;
 @media screen and (max-width: 360px) {
   .shoes img {
     width: 200px;
+    height: 200px;
   }
 
   .shoes div.img {
