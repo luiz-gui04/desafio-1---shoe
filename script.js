@@ -88,7 +88,7 @@ function script() {
 
     cart.addEventListener('click', handleClick);
     function handleClick() {
-      buy.classList.add('flex');
+      buy.classList.add('grid');
     }
 
     mais.addEventListener('click', function () {
@@ -100,14 +100,14 @@ function script() {
       somar--;
       unidade.innerText = somar;
       if (somar < 1) {
-        buy.classList.remove('flex');
+        buy.classList.remove('grid');
         somar = 1;
         unidade.innerText = somar;
       }
     });
 
     sair.addEventListener('click', function () {
-      buy.classList.remove('flex');
+      buy.classList.remove('grid');
       somar = 1;
       unidade.innerText = somar;
     });

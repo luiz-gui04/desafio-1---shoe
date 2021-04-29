@@ -10,8 +10,8 @@
   animation: fechar 0.3s forwards !important;
 }
 
-.flex {
-  display: flex !important;
+.grid {
+  display: grid !important;
   animation: animar 0.3s forwards;
 }
 
@@ -47,14 +47,16 @@
 
 .background {
   filter: blur(7px);
+
+  width: 100vw;
+  height: 100%;
+}
+
+main {
   background-image: url('img/bgjordan.jpg');
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  width: 100%;
-  height: 100vh;
-  position: absolute;
 }
 
 .container {
@@ -63,8 +65,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  position: relative;
 }
 
 .container .shoes {
@@ -85,8 +85,7 @@
 }
 
 .shoes img {
-  height: 320px;
-  width: 320px;
+  width: 300px;
   border-radius: 0px;
 
   transform: rotate(30deg);
@@ -224,11 +223,9 @@ text-overflow: ellipsis;
 
   display: none;
   grid-template-columns: 1fr 1fr;
-  justify-content: space-around;
   align-items: center;
   border-radius: 16px 50px 16px 16px;
   background-color: rgba(30, 30, 30, 0.99);
-  padding-left: 2%;
 }
 
 .buy .img-buy img {
@@ -286,7 +283,9 @@ text-overflow: ellipsis;
 .quantidade .buy-quantidade {
   background: #faf8eb;
   color: #000;
-  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quantidade button {
@@ -312,6 +311,7 @@ text-overflow: ellipsis;
   display: flex;
   justify-content: left;
   align-items: center;
+  margin-top: 4%;
 }
 
 .buy-finalizar .comprar {
@@ -338,4 +338,164 @@ text-overflow: ellipsis;
 }
 .buy-finalizar p:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 726px) {
+  .buy {
+    height: 30rem;
+    width: 35rem;
+  }
+
+  .buy .img-buy img {
+    width: 17rem;
+  }
+
+  .buy .buy-desc h1 {
+    font-size: 2.2rem;
+  }
+
+  .buy .buy-desc .buy-compra p {
+    font-size: 1rem;
+  }
+
+  .buy .buy-desc p span {
+    font-size: 0.875rem;
+  }
+
+  .buy-compra h2 {
+    font-size: 1.2rem;
+  }
+
+  .quantidade p {
+    font-size: 1rem;
+  }
+
+  .quantidade button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .buy-finalizar .comprar {
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .buy-finalizar p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .buy {
+    height: 30rem;
+    width: 30rem;
+    padding: 2%;
+  }
+
+  .buy-desc .desc {
+    display: flex;
+    margin-top: 1%;
+    flex-direction: row;
+    gap: 20%;
+  }
+
+  .buy .img-buy {
+    text-align: center;
+  }
+
+  .shoes img {
+    width: 230px;
+  }
+
+  .shoes div.img {
+    left: 90px;
+    bottom: 230px;
+  }
+
+  .buy {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .buy {
+    height: 30rem;
+    width: 25rem;
+  }
+
+  .buy .buy-desc h1 {
+    font-size: 2rem;
+  }
+
+  .buy .buy-desc .buy-compra p {
+    font-size: 0.95rem;
+  }
+
+  .buy .buy-desc p span {
+    font-size: 0.8rem;
+  }
+
+  .buy-compra h2 {
+    font-size: 1rem;
+  }
+
+  .quantidade p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .shoes img {
+    width: 230px;
+  }
+
+  .shoes div.img {
+    left: 40px;
+    bottom: 230px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .buy {
+    height: 30rem;
+    width: 20rem;
+    padding: 0 2%;
+  }
+
+  .buy-finalizar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1% 0;
+  }
+
+  .buy-finalizar p {
+    margin: 8% 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .shoes img {
+    width: 200px;
+  }
+
+  .shoes div.img {
+    left: 40px;
+    bottom: 230px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .buy {
+    height: 30rem;
+    width: 18rem;
+    padding: 0 2%;
+  }
 }
